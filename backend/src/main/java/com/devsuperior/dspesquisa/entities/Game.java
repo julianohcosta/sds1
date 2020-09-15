@@ -13,7 +13,6 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-
 import com.devsuperior.dspesquisa.entities.enums.Platform;
 
 @Entity
@@ -31,7 +30,7 @@ public class Game implements Serializable{
 	@ManyToOne
 	@JoinColumn(name = "genre_id")
 	private Genre genre;
-	
+
 	@OneToMany(mappedBy = "game")
 	private List<Record> records = new ArrayList<>();
 	
